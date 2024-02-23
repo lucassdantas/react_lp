@@ -26,14 +26,10 @@
 }
 
 .banner-button-container{
-    display:flex;
-    flex-wrap:nowrap;
-    justify-content:center;
+  
 }
 
 .banner-button{
-    text-align:center;
-
     cursor:pointer;
     color:#fff;
     outline:none;

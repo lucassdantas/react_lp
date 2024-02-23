@@ -1,3 +1,6 @@
 body{
     background-color:#111;
 }
+h1, h2, h3, h4, h5, h6, p, div, button, input{
+    font-family:Poppins, 'san-serif';
+}

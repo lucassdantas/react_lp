@@ -5,4 +5,5 @@ export type Movie = {
     poster_path:string;
     backdrop_path:string;
     name:string,
+    overview:string;
 }
