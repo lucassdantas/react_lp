@@ -30,7 +30,7 @@ export const Row = ({title, path, isLarge}:{title:string, path:string, isLarge:b
           return (
             <img 
               key={movie.id}
-              src={imageHost+movie.poster_path}
+              src={imageHost + (isLarge? movie.backdrop_path : movie.poster_path)}
               alt={movie.name}
               className={isLarge? 'movie-card-large' : 'movie-card'}
             />

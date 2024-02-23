@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './style.css'
 import { categories, getMovies } from '../../lib/api'
 import { Movie } from '../../@types/moviesType'
 import { MovieFetchResults } from '../../@types/MovieFetchResults'
 
-const imageHost = 'https://image.tmdb.org/t/p/original/'
+const imageHost = 'https://image.tmdb.org/t/p/original'
 export const Banner = () => {
     const [movie, setMovie] = useState<Movie>()
     
@@ -29,11 +29,12 @@ export const Banner = () => {
     return (
         <>
         {movie &&
-            <img 
-                src={imageHost+movie.poster_path}
-                alt={movie.name}
-                className={'movie-card'}
-            />
+            <header className='banner-container' style={{
+                backgroundSize:'cover',
+                backgroundImage: `url('${imageHost+movie.poster_path})`,
+                roundPosition:'center-center'
+            }}>
+            </header>
         }
         </>
     )
