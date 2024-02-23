@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import './style.css'
 import { categories, getMovies } from '../../lib/api'
 import { Movie } from '../../@types/moviesType'
 import { MovieFetchResults } from '../../@types/MovieFetchResults'
+import './style.css'
 
 const imageHost = 'https://image.tmdb.org/t/p/original'
 export const Banner = () => {
@@ -34,6 +34,14 @@ export const Banner = () => {
                 backgroundImage: `url('${imageHost+movie.poster_path})`,
                 roundPosition:'center-center'
             }}>
+                <div className='banner-content'>
+                    <h1 className='banner-title'>{movie.title || movie.name || movie.original_name}</h1>
+                    <div className="bannerButtonContainer">
+                        <div className='banner-button'>Assistir</div>
+                        <div className='banner-button'> Minha lista </div>
+                        <div className='banner-description'> Minha lista </div>
+                    </div>
+                </div>
             </header>
         }
         </>
