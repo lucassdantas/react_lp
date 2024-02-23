@@ -6,14 +6,13 @@ import './style.css'
 
 
 const imageHost = 'https://image.tmdb.org/t/p/original/'
-export const Row = ({title, path}:{title:string, path:string}) => {
+export const Row = ({title, path, isLarge}:{title:string, path:string, isLarge:boolean}) => {
   const [movies, setMovies] = useState([])
   
   const fetchMovies = async (_path:string) => {
     try {
       const data = await getMovies(_path)
       setMovies(data.results)
-      console.log(data)
     } catch (error) {
       console.log(error)
     }
@@ -33,7 +32,7 @@ export const Row = ({title, path}:{title:string, path:string}) => {
               key={movie.id}
               src={imageHost+movie.poster_path}
               alt={movie.name}
-              className='movie-card'
+              className={isLarge? 'movie-card-large' : 'movie-card'}
             />
           )
         })}

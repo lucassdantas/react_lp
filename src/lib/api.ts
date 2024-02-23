@@ -6,32 +6,38 @@ export const categories:categoriesType[] = [
     {
         name: 'trending',
         title:'Em alta',
-        path:`/trending/movie/week?language=pt-BR&api_key=${apiKey}`
+        path:`/trending/movie/week?language=pt-BR&api_key=${apiKey}`,
+        isLarge:true,
     },
     {
         name: 'netflixOriginals',
         title:'Originais Netflix',
-        path:`/discover/tv?language=pt-BR&api_key=${apiKey}`
+        path:`/discover/tv?language=pt-BR&api_key=${apiKey}`,
+        isLarge:false,
     },
     {
         name: 'topRated',
         title:'Populares',
-        path:`/movie/top_rated?language=pt-BR&api_key=${apiKey}`
+        path:`/movie/top_rated?language=pt-BR&api_key=${apiKey}`,
+        isLarge:false,
     },
     {
         name: 'comedy',
         title:'Comédias',
-        path:`/discover/tv?with_genres=35&api_key=${apiKey}`
+        path:`/discover/tv?with_genres=35&api_key=${apiKey}`,
+        isLarge:false,
     },
     {
         name: 'romances',
         title:'Romances',
-        path:`/discover/tv?with_genres=1074&api_key=${apiKey}`
+        path:`/discover/tv?with_genres=1074&api_key=${apiKey}`,
+        isLarge:false,
     },
     {
         name: 'documentaries',
         title:'Documentários',
-        path:`/discover/tv?with_genres=99&api_key=${apiKey}`
+        path:`/discover/tv?with_genres=99&api_key=${apiKey}`,
+        isLarge:false,
     },
 ]
 
